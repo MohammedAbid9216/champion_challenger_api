@@ -1,9 +1,35 @@
+# Virtual environments
 venv/
-__pycache__/
-*.pyc
+.venv/
+
+# Environment variables / secrets
 .env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# macOS
 .DS_Store
 
-app/models/backup/
-deployment_state.json
+# Model artifacts
+*.pkl
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
 app/logs/*.db
+
+# Deployment backups
+app/models/backup/
+
+# Local deployment state
+deployment_state.json
+
+# IDE
+.vscode/
+.idea/

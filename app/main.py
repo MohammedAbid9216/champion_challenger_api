@@ -11,9 +11,9 @@ from app.core.schema import (
 
 from app.core.router import choose_model
 
-from app.services.predictor import predict
+from app.src.predictor import predict
 
-from app.services.logger import (
+from app.src.logger import (
     create_table,
     log_prediction,
     update_actual_outcome

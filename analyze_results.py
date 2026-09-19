@@ -1,5 +1,5 @@
 import mysql.connector
-
+import os
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -9,13 +9,15 @@ from sklearn.metrics import (
 )
 
 from scipy.stats import chi2_contingency
+from dotenv import load_dotenv
 
+load_dotenv()
 
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Abid@9216",
-    "database": "champion_challenger_db"
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
 
